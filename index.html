@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFG Estudio Jurídico | Abogados en Resistencia, Chaco</title>
+    <meta name="description" content="AFG Estudio Jurídico en Resistencia, Chaco. Especialistas en Derecho de Familia, Laboral, Sucesiones y Penal. Gisela López Bravo, Alberto Pértile y Fátima Bravo.">
+    <meta name="keywords" content="abogados resistencia chaco, derecho familia, derecho laboral, sucesiones, penal, afg estudio juridico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== VARIABLES ========== */
+        :root {
+            --color-primary: #153f67;
+            --color-secondary: #b4e558;
+            --color-accent-light: #dcf2af;
+            --color-accent-blue: #40adbf;
+            --color-dark: #0a1f33;
+            --color-white: #FFFFFF;
+            --color-light-bg: #f5f5f5;
+            
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Playfair Display', serif;
+            
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 2px 12px rgba(21, 63, 103, 0.15);
+            --shadow-md: 0 4px 24px rgba(21, 63, 103, 0.2);
+            --shadow-lg: 0 8px 40px rgba(21, 63, 103, 0.3);
+        }
+
+        /* ========== RESET ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--color-primary);
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--color-white);
+            background-color: var(--color-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ========== UTILITIES ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section__subtitle {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .section__title {
+            font-family: var(--font-secondary);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section__description {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+            line-height: 1.8;
+            margin: 0 auto;
+        }
+
+        .section__header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.1rem 2.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 0;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn--primary {
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+        }
+
+        .btn--primary:hover {
+            background-color: var(--color-accent-light);
+            transform: translateY(-3px);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--color-white);
+            border: 2px solid var(--color-white);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 2.5rem 0;
+        }
+
+        .header.scrolled {
+            background-color: var(--color-dark);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            position: absolute;
+            left: 0;
+            margin-right: 3rem;
+        }
+
+        .header.scrolled .logo-wrapper {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .logo-wrapper img {
+            height: 80px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .nav__menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav__list {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav__link {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--color-white);
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+
+        .nav__link:hover {
+            color: var(--color-secondary);
+        }
+
+        .nav__link--cta {
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+            padding: 0.7rem 1.8rem;
+            border-radius: 0;
+        }
+
+        .nav__link--cta:hover {
+            background-color: var(--color-accent-light);
+            color: var(--color-dark);
+        }
+
+        .nav__toggle,
+        .nav__close {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-white);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--color-primary);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80') center/cover no-repeat fixed;
+            filter: grayscale(100%);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, hsla(209, 73%, 13%, 0.85) 0%, rgba(4, 17, 30, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .hero__container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero__logo {
+            width: 280px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero__title {
+            font-family: var(--font-secondary);
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .hero__subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+            letter-spacing: 2px;
+        }
+
+        .hero__description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0 auto 3rem;
+            max-width: 700px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero__buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ========== AREAS SECTION ========== */
+        .areas {
+            padding: 6rem 0;
+            background-color: var(--color-secondary);
+            background-image: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 25px,
+                    rgba(220, 242, 175, 0.10) 35px,
+                    rgba(220, 242, 175, 0.10) 70px
+                );
+        }
+
+        .areas .section__subtitle {
+            color: var(--color-primary);
+        }
+
+        .areas .section__title {
+            color: var(--color-dark);
+        }
+
+        .areas .section__description {
+            color: var(--color-dark);
+        }
+
+        .areas__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .area-card {
+            background-color: var(--color-dark);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 3px solid transparent;
+        }
+
+        .area-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-dark);
+            background-color: var(--color-dark);
+        }
+
+        .area-card__icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .area-card__title {
+            font-family: var(--font-secondary);
+            font-size: 1.3rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .area-card__description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* ========== ABOUT SECTION ========== */
+        .about {
+            padding: 6rem 0;
+            background-color: var(--color-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80') center/cover no-repeat fixed;
+            filter: grayscale(100%);
+            z-index: 0;
+        }
+
+        .about::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, hsla(209, 73%, 13%, 0.85) 0%, rgba(4, 17, 30, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .about .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about__content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about__text {
+            font-size: 1.15rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .about__features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item__icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-item__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-item__description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        /* ========== TEAM SECTION ========== */
+        .team {
+            padding: 6rem 0;
+            background-color: var(--color-dark);
+        }
+
+        .team__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: linear-gradient(135deg, rgba(180, 229, 88, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .team-card:hover {
+            border-color: var(--color-secondary);
+            transform: translateY(-10px);
+        }
+
+        .team-card__icon {
+            width: 100px;
+            height: 100px;
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--color-secondary);
+        }
+
+        .team-card__name {
+            font-family: var(--font-secondary);
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .team-card__role {
+            font-size: 0.95rem;
+            color: var(--color-secondary);
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* ========== WHY CHOOSE SECTION ========== */
+        .why-choose {
+            padding: 6rem 0;
+            background-color: var(--color-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80') center/cover no-repeat fixed;
+            filter: grayscale(100%);
+            z-index: 0;
+        }
+
+        .why-choose::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, hsla(209, 73%, 13%, 0.85) 0%, rgba(4, 17, 30, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .why-choose .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-choose .section__subtitle {
+            color: var(--color-secondary);
+        }
+
+        .why-choose .section__title {
+            color: var(--color-white);
+        }
+
+        .why-choose .section__description {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .why-choose__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background-color: var(--color-dark);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 3px solid transparent;
+        }
+
+        .why-card:hover {
+            border-color: var(--color-secondary);
+            transform: translateY(-8px);
+        }
+
+        .why-card__number {
+            font-family: var(--font-secondary);
+            font-size: 3rem;
+            color: var(--color-secondary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .why-card__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .why-card__description {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        /* ========== CONTACT SECTION ========== */
+        .contact {
+            padding: 6rem 0;
+            background-color: var(--color-dark);
+        }
+
+        .contact__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact__form {
+            background: linear-gradient(135deg, rgba(180, 229, 88, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
+            padding: 3rem;
+            border-radius: 0;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .contact__form:hover {
+            border-color: var(--color-secondary);
+        }
+
+        .form__group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form__group label {
+            display: block;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .form__group input,
+        .form__group select,
+        .form__group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 2px solid rgba(180, 229, 88, 0.2);
+            background-color: rgba(10, 31, 51, 0.5);
+            color: var(--color-white);
+            font-family: var(--font-primary);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border-radius: 0;
+        }
+
+        .form__group input::placeholder,
+        .form__group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form__group input:focus,
+        .form__group select:focus,
+        .form__group textarea:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            background-color: rgba(10, 31, 51, 0.7);
+        }
+
+        .form__group select {
+            color: var(--color-white);
+        }
+
+        .form__group select option {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+
+        .form__group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form__submit {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .contact__info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-info-card {
+            background: linear-gradient(135deg, rgba(180, 229, 88, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
+            padding: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .contact-info-card:hover {
+            background: linear-gradient(135deg, rgba(180, 229, 88, 0.15) 0%, rgba(64, 173, 191, 0.08) 100%);
+            border-color: var(--color-secondary);
+            transform: translateX(10px);
+        }
+
+        .contact-info-card__icon {
+            width: 55px;
+            height: 55px;
+            background-color: var(--color-secondary);
+            color: var(--color-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact-info-card__content h4 {
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info-card__content p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .contact-info-card__content a {
+            color: rgba(255, 255, 255, 0.9);
+            transition: var(--transition);
+        }
+
+        .contact-info-card__content a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background-color: var(--color-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 0 0;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer__brand .logo-wrapper img {
+            height: 90px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer__brand .logo-wrapper {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+            left: auto;
+            margin-right: 0;
+        }
+
+        .footer__description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer__social a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            color: var(--color-dark);
+            transition: var(--transition);
+            font-weight: 700;
+        }
+
+        .footer__social a:hover {
+            background-color: var(--color-accent-light);
+            transform: translateY(-3px);
+        }
+
+        .footer__section h4 {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer__links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer__links a:hover {
+            color: var(--color-secondary);
+            padding-left: 5px;
+        }
+
+        .footer__contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer__contact i {
+            color: var(--color-secondary);
+            margin-top: 0.2rem;
+        }
+
+        .footer__contact a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+
+        .footer__contact a:hover {
+            color: var(--color-secondary);
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(180, 229, 88, 0.2);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer__bottom p {
+            margin: 0 0 0.5rem 0;
+        }
+
+        .footer__bottom p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer__bottom a {
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        /* ========== WHATSAPP FLOAT ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media screen and (max-width: 1024px) {
+            .areas__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about__features {
+                grid-template-columns: 1fr;
+            }
+
+            .team__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav__menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--color-dark);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 5rem;
+                transition: var(--transition);
+            }
+
+            .nav__menu.active {
+                right: 0;
+            }
+
+            .nav__list {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .nav__link {
+                color: var(--color-white) !important;
+                font-size: 1.25rem;
+            }
+
+            .nav__link--cta {
+                background-color: var(--color-secondary) !important;
+                color: var(--color-dark) !important;
+            }
+
+            .nav__toggle,
+            .nav__close {
+                display: block;
+            }
+
+            .nav__close {
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                color: var(--color-white);
+            }
+
+            .nav {
+                justify-content: center;
+                padding: 0 2rem;
+                position: relative;
+            }
+
+            .logo-wrapper {
+                position: static;
+                left: auto;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .header.scrolled .logo-wrapper {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav__toggle {
+                position: absolute;
+                right: 2rem;
+            }
+
+            .nav__menu.active ~ .nav__toggle {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .hero {
+                padding: 10px 0 60px;
+                background-attachment: scroll;
+            }
+
+            .hero__title {
+                font-size: 3rem;
+            }
+
+            .hero__logo {
+                width: 200px;
+            }
+
+            .hero__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 90%;
+                max-width: 400px;
+                justify-content: center;
+            }
+
+            .areas__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .area-card {
+                text-align: center;
+            }
+
+            .about {
+                background-attachment: scroll;
+            }
+
+            .why-choose {
+                background-attachment: scroll;
+            }
+
+            .why-choose__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                background-attachment: scroll;
+            }
+
+            .contact__form {
+                text-align: center;
+            }
+
+            .form__submit {
+                display: flex;
+                margin: 0 auto;
+            }
+
+            .footer__grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer__brand {
+                text-align: center;
+            }
+
+            .footer__brand .logo-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer__social {
+                justify-content: center;
+            }
+
+            .footer__links {
+                align-items: center;
+            }
+
+            .footer__contact li {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .form__group label,
+            .form__group input,
+            .form__group select,
+            .form__group textarea {
+                text-align: center;
+            }
+
+            .contact-info-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .section__title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .hero__title {
+                font-size: 2.5rem;
+            }
+
+            .hero__logo {
+                width: 180px;
+            }
+
+            .section__title {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .contact__form {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .hero__title {
+                font-size: 2rem;
+            }
+
+            .section__title {
+                font-size: 1.75rem;
+            }
+
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 0.875rem;
+            }
+
+            .hero__logo {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HEADER / NAVBAR -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#inicio" class="logo-wrapper">
+                <img src="./logo.png" alt="AFG Estudio Jurídico">
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#areas" class="nav__link">Áreas</a></li>
+                    <li class="nav__item"><a href="#nosotros" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#equipo" class="nav__link">Equipo</a></li>
+                    <li class="nav__item"><a href="#contacto" class="nav__link nav__link--cta">Contacto</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero__container container">
+            <img src="./logo.png" alt="AFG Estudio Jurídico" class="hero__logo">
+            <p class="hero__description">
+                Somos un equipo de profesionales comprometidos con la defensa de tus derechos. 
+                En Resistencia, Chaco, brindamos asesoramiento jurídico integral con calidad humana 
+                y excelencia profesional.
+            </p>
+            <div class="hero__buttons">
+                <a href="https://wa.me/5493624537811?text=Hola%2C%20necesito%20asesoramiento%20legal" class="btn btn--primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Consultar Ahora
+                </a>
+                <a href="#areas" class="btn btn--outline">
+                    Nuestras Áreas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS SECTION -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Especialidades</span>
+                <h2 class="section__title">Áreas de Práctica</h2>
+                <p class="section__description">
+                    Atendemos diversas ramas del derecho con profesionalismo y compromiso
+                </p>
+            </div>
+
+            <div class="areas__grid">
+                <div class="area-card">
+                    <div class="area-card__icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="area-card__title">Derecho de Familia</h3>
+                    <p class="area-card__description">
+                        Divorcios, régimen de visitas, cuota alimentaria, filiación y adopción.
+                    </p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-card__icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="area-card__title">Derecho Laboral</h3>
+                    <p class="area-card__description">
+                        Despidos, accidentes de trabajo, ART, liquidación de haberes y conflictos laborales.
+                    </p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-card__icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="area-card__title">Sucesiones</h3>
+                    <p class="area-card__description">
+                        Tramitación de sucesiones, declaratoria de herederos y división de bienes.
+                    </p>
+                </div>
+
+                <div class="area-card">
+                    <div class="area-card__icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="area-card__title">Derecho Penal</h3>
+                    <p class="area-card__description">
+                        Defensa penal, querella, víctimas de delito y asesoramiento en causas penales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Quiénes Somos</span>
+            </div>
+
+            <div class="about__content">
+                <p class="about__text">
+                    Somos un equipo de abogados especializados en distintas ramas del derecho, 
+                    con sede en Resistencia, Chaco. Nos caracteriza nuestro compromiso con la justicia, 
+                    la atención personalizada y la búsqueda constante de soluciones efectivas para 
+                    nuestros clientes.
+                </p>
+                <p class="about__text">
+                    Con años de experiencia en el ejercicio profesional, trabajamos día a día para 
+                    defender tus derechos con seriedad, responsabilidad y dedicación. Tu tranquilidad 
+                    es nuestra prioridad.
+                </p>
+
+                <div class="about__features">
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-item__title">Compromiso</h3>
+                        <p class="feature-item__description">
+                            Defendemos tus intereses con dedicación y profesionalismo en cada caso.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="feature-item__title">Confianza</h3>
+                        <p class="feature-item__description">
+                            Construimos una relación sólida basada en la transparencia y comunicación.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="feature-item__title">Experiencia</h3>
+                        <p class="feature-item__description">
+                            Años de trayectoria nos respaldan en la resolución de conflictos legales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team" id="equipo">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Nuestro Equipo</span>
+                <h2 class="section__title">Profesionales</h2>
+                <p class="section__description">
+                    Conocé a los integrantes de nuestro estudio jurídico
+                </p>
+            </div>
+
+            <div class="team__grid">
+                <div class="team-card">
+                    <div class="team-card__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="team-card__name">Gisela López Bravo</h3>
+                    <p class="team-card__role">Abogada</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="team-card__name">Alberto Pértile</h3>
+                    <p class="team-card__role">Abogado</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="team-card__name">Fátima Bravo</h3>
+                    <p class="team-card__role">Abogada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE SECTION -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Ventajas</span>
+                <h2 class="section__title">¿Por Qué Elegirnos?</h2>
+                <p class="section__description">
+                    Razones para confiar en nuestro estudio jurídico
+                </p>
+            </div>
+
+            <div class="why-choose__grid">
+                <div class="why-card">
+                    <div class="why-card__number">01</div>
+                    <h3 class="why-card__title">Atención Personalizada</h3>
+                    <p class="why-card__description">
+                        Cada cliente recibe un trato único y dedicado, adaptado a sus necesidades específicas.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">02</div>
+                    <h3 class="why-card__title">Trayectoria Sólida</h3>
+                    <p class="why-card__description">
+                        Años de experiencia nos respaldan en diversas áreas del derecho en Chaco.
+                    </p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-card__number">03</div>
+                    <h3 class="why-card__title">Compromiso Total</h3>
+                    <p class="why-card__description">
+                        Defendemos tus derechos con dedicación absoluta en cada etapa del proceso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__subtitle">Contacto</span>
+                <h2 class="section__title">Consultanos</h2>
+                <p class="section__description">
+                    Estamos para ayudarte. Comunicate con nosotros
+                </p>
+            </div>
+
+            <div class="contact__grid">
+                <div class="contact__form">
+                    <form id="contactForm">
+                        <div class="form__group">
+                            <label for="nombre">Nombre y Apellido *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Su nombre completo" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 362 123-4567" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="area">Área de Consulta *</label>
+                            <select id="area" name="area" required>
+                                <option value="">Seleccione un área</option>
+                                <option value="familia">Derecho de Familia</option>
+                                <option value="laboral">Derecho Laboral</option>
+                                <option value="sucesiones">Sucesiones</option>
+                                <option value="penal">Derecho Penal</option>
+                                <option value="otro">Otra Consulta</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="mensaje">Describa su Situación *</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntenos sobre su caso..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary form__submit">
+                            Enviar Consulta <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact__info">
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-info-card__content">
+                            <h4>WhatsApp - Gisela</h4>
+                            <p><a href="https://wa.me/5493624537811">+54 9 362 453-7811</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-card__content">
+                            <h4>Ubicación</h4>
+                            <p>Avenida Hernandarias<br>Resistencia, Chaco 3500</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info-card__content">
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00<br>Consultas por WhatsApp</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-info-card__content">
+                            <h4>Instagram</h4>
+                            <p><a href="https://www.instagram.com/afg_estudiodeabogados/" target="_blank">@afg_estudiodeabogados</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="logo-wrapper">
+                        <img src="./logo.png" alt="AFG Estudio Jurídico">
+                    </div>
+                    <p class="footer__description">
+                        Estudio jurídico especializado en Derecho de Familia, Laboral, Sucesiones y Penal. 
+                        Resistencia, Chaco, Argentina.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/afg_estudiodeabogados/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/afgestudiojuridico" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Navegación</h4>
+                    <ul class="footer__links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#areas">Áreas</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#equipo">Equipo</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Áreas</h4>
+                    <ul class="footer__links">
+                        <li><a href="#areas">Derecho de Familia</a></li>
+                        <li><a href="#areas">Derecho Laboral</a></li>
+                        <li><a href="#areas">Sucesiones</a></li>
+                        <li><a href="#areas">Derecho Penal</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h4>Contacto</h4>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Resistencia, Chaco
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/5493624537811">+54 9 362 453-7811</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/afg_estudiodeabogados/" target="_blank">@afg_estudiodeabogados</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 AFG Estudio Jurídico. Todos los derechos reservados.</p>
+                <p>Desarrollado por <a href="https://instagram.com/sageeDev" target="_blank">@sageeDev</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5493624537811?text=Hola%2C%20necesito%20asesoramiento%20legal" class="whatsapp-float" id="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const whatsappFloat = document.getElementById('whatsapp-float');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                whatsappFloat.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                whatsappFloat.classList.remove('visible');
+            }
+        });
+
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navClose = document.getElementById('nav-close');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('active');
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        }
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Redirect to WhatsApp with form data
+            const nombre = encodeURIComponent(data.nombre);
+            const area = encodeURIComponent(data.area);
+            const mensaje = encodeURIComponent(data.mensaje);
+            const telefono = encodeURIComponent(data.telefono);
+            
+            const whatsappMessage = `Hola, mi nombre es ${nombre}. Necesito consultar sobre: ${area}. ${mensaje}. Mi teléfono es: ${telefono}`;
+            const whatsappURL = `https://wa.me/5493624537811?text=${whatsappMessage}`;
+            
+            window.open(whatsappURL, '_blank');
+            contactForm.reset();
+        });
+    </script>
+
+</body>
+</html>
