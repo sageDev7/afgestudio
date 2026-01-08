@@ -18,11 +18,11 @@
     <style>
         /* ========== VARIABLES ========== */
         :root {
-            --color-primary: #153f67;
-            --color-secondary: #b4e558;
-            --color-accent-light: #dcf2af;
-            --color-accent-blue: #40adbf;
-            --color-dark: #0a1f33;
+            --color-primary: #1e3a5f;
+            --color-secondary: #d4af37;
+            --color-accent-light: #f0e68c;
+            --color-accent-dark: #0f2847;
+            --color-dark: #0a1929;
             --color-white: #FFFFFF;
             --color-light-bg: #f5f5f5;
             
@@ -30,9 +30,9 @@
             --font-secondary: 'Playfair Display', serif;
             
             --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-sm: 0 2px 12px rgba(21, 63, 103, 0.15);
-            --shadow-md: 0 4px 24px rgba(21, 63, 103, 0.2);
-            --shadow-lg: 0 8px 40px rgba(21, 63, 103, 0.3);
+            --shadow-sm: 0 2px 12px rgba(30, 58, 95, 0.15);
+            --shadow-md: 0 4px 24px rgba(30, 58, 95, 0.2);
+            --shadow-lg: 0 8px 40px rgba(30, 58, 95, 0.3);
         }
 
         /* ========== RESET ========== */
@@ -323,8 +323,8 @@
                     45deg,
                     transparent,
                     transparent 25px,
-                    rgba(220, 242, 175, 0.10) 35px,
-                    rgba(220, 242, 175, 0.10) 70px
+                    rgba(220, 242, 175, 0.05) 35px,
+                    rgba(220, 242, 175, 0.05) 70px
                 );
         }
 
@@ -482,13 +482,13 @@
 
         .team__grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .team-card {
-            background: linear-gradient(135deg, rgba(180, 229, 88, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(254, 236, 73, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
             padding: 3rem 2rem;
             text-align: center;
             transition: var(--transition);
@@ -501,8 +501,8 @@
         }
 
         .team-card__icon {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background-color: var(--color-primary);
             color: var(--color-secondary);
             border-radius: 50%;
@@ -511,7 +511,14 @@
             justify-content: center;
             font-size: 2.5rem;
             margin: 0 auto 1.5rem;
-            border: 3px solid var(--color-secondary);
+            border: 4px solid var(--color-secondary);
+            overflow: hidden;
+        }
+
+        .team-card__icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .team-card__name {
@@ -632,7 +639,7 @@
         }
 
         .contact__form {
-            background: linear-gradient(135deg, rgba(180, 229, 88, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(254, 236, 73, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
             padding: 3rem;
             border-radius: 0;
             border: 2px solid transparent;
@@ -662,7 +669,7 @@
         .form__group textarea {
             width: 100%;
             padding: 1rem 1.2rem;
-            border: 2px solid rgba(180, 229, 88, 0.2);
+            border: 2px solid rgba(254, 236, 73, 0.2);
             background-color: rgba(10, 31, 51, 0.5);
             color: var(--color-white);
             font-family: var(--font-primary);
@@ -710,7 +717,7 @@
         }
 
         .contact-info-card {
-            background: linear-gradient(135deg, rgba(180, 229, 88, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(254, 236, 73, 0.1) 0%, rgba(64, 173, 191, 0.05) 100%);
             padding: 2rem;
             display: flex;
             align-items: flex-start;
@@ -915,6 +922,26 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
 
+        /* ========== MAP SECTION ========== */
+        .map {
+            padding: 0;
+            background-color: var(--color-white);
+        }
+
+        .map__container {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map__container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+
         /* ========== RESPONSIVE ========== */
         @media screen and (max-width: 1024px) {
             .areas__grid {
@@ -926,7 +953,7 @@
             }
 
             .team__grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .contact__grid {
@@ -1050,6 +1077,10 @@
 
             .about {
                 background-attachment: scroll;
+            }
+
+            .team__grid {
+                grid-template-columns: 1fr;
             }
 
             .why-choose {
@@ -1336,15 +1367,7 @@
             <div class="team__grid">
                 <div class="team-card">
                     <div class="team-card__icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 class="team-card__name">Gisela López Bravo</h3>
-                    <p class="team-card__role">Abogada</p>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-card__icon">
-                        <i class="fas fa-user-tie"></i>
+                        <img src="./pertile.png" alt="Alberto Pértile">
                     </div>
                     <h3 class="team-card__name">Alberto Pértile</h3>
                     <p class="team-card__role">Abogado</p>
@@ -1352,9 +1375,25 @@
 
                 <div class="team-card">
                     <div class="team-card__icon">
-                        <i class="fas fa-user-tie"></i>
+                        <img src="./lopezBravo.jpeg" alt="Gisela López Bravo">
+                    </div>
+                    <h3 class="team-card__name">Gisela López Bravo</h3>
+                    <p class="team-card__role">Abogada</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__icon">
+                        <img src="./bravo.jpeg" alt="Fátima Bravo">
                     </div>
                     <h3 class="team-card__name">Fátima Bravo</h3>
+                    <p class="team-card__role">Abogada</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-card__icon">
+                        <img src="./gonzalez.jpeg" alt="Jazmín González">
+                    </div>
+                    <h3 class="team-card__name">Jazmín González</h3>
                     <p class="team-card__role">Abogada</p>
                 </div>
             </div>
@@ -1397,6 +1436,17 @@
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="map">
+        <div class="map__container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.2891842637514!2d-58.98731192378564!3d-27.45089976699287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450c62b1e1e36d%3A0x5d8b1a2e7f0c4e8f!2sAv.%20Hernandarias%20173%2C%20Resistencia%2C%20Chaco!5e0!3m2!1ses!2sar!4v1673000000000!5m2!1ses!2sar&style=feature:all|element:geometry|color:0x242f3e&style=feature:all|element:labels.text.stroke|color:0x242f3e&style=feature:all|element:labels.text.fill|color:0x746855&style=feature:administrative.locality|element:labels.text.fill|color:0xd59563&style=feature:poi|element:labels.text.fill|color:0xd59563&style=feature:poi.park|element:geometry|color:0x263c3f&style=feature:poi.park|element:labels.text.fill|color:0x6b9a76&style=feature:road|element:geometry|color:0x38414e&style=feature:road|element:geometry.stroke|color:0x212a37&style=feature:road|element:labels.text.fill|color:0x9ca5b3&style=feature:road.highway|element:geometry|color:0x746855&style=feature:road.highway|element:geometry.stroke|color:0x1f2835&style=feature:road.highway|element:labels.text.fill|color:0xf3d19c&style=feature:transit|element:geometry|color:0x2f3948&style=feature:transit.station|element:labels.text.fill|color:0xd59563&style=feature:water|element:geometry|color:0x17263c&style=feature:water|element:labels.text.fill|color:0x515c6d&style=feature:water|element:labels.text.stroke|color:0x17263c" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
 
@@ -1469,7 +1519,7 @@
                         </div>
                         <div class="contact-info-card__content">
                             <h4>Ubicación</h4>
-                            <p>Avenida Hernandarias<br>Resistencia, Chaco 3500</p>
+                            <p>Av. Hernandarias 173, 2do Piso, Oficina 2<br>Resistencia, Chaco 3500</p>
                         </div>
                     </div>
 
@@ -1511,7 +1561,8 @@
                     </p>
                     <div class="footer__social">
                         <a href="https://www.instagram.com/afg_estudiodeabogados/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/afgestudiojuridico" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/agestudiodeAbogados/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@afg.abogados" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
